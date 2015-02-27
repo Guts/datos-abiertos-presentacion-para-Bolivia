@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,344 +36,648 @@
 
 	<body>
 
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
+		<div class="theme-font-league theme-color-beige-brown" style="width: 100%; height: 100%;">
+			<div class="reveal">
+				<div class="slides">
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 113px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>Datos abiertos para una buena gobernanza numérica</h1>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 739px; left: 111px; top: 411px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<h3>
+									<strong>Seminario: Información Pública y Datos Abiertos</strong>
+								</h3>
+								<p>
+									<span style="font-size:16px">
+										<a href="http://adsib.gob.bo/adsibnueva/noticiacompleta.php?codigo_noticia=Vm0wd2VFMUdiRmhTV0d4V1YwZG9XRmx0ZEhkVU1WcDFZMFprVm1KR2NIbFdWM1JMVlVaV1ZVMUVhejA9" target="_blank">
+											<strong>consultar el evento en línea</strong>
+										</a>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 403px; left: 544px; top: 630px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:24px">
+										<em>La Paz, Bolivia - Open Data Day 2015</em>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 224px; left: 16px; top: 630px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 14;" class="sl-block-content">
+								<p>
+									<span style="font-size:24px">Julien Moura</span>
+								</p>
+							</div>
 						</div>
 					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 20px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;">
+								<h2 style="text-align: center;">¿Quien habla?</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 665px; left: 0px; top: 94px; height: auto;">
+							<div class="sl-block-content" style="z-index: 13; text-align: left;">
+								<ul>
+									<li data-fragment-index="0" class="fragment">Ingeniero en geomática</li>
+									<li data-fragment-index="0" class="fragment">Apasionado por todo lo que es datos y sobre todo&nbsp; geo- 
+										<em>algo</em>
+									</li>
+								</ul>
+								<p data-fragment-index="3" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="1" class="fragment">Jefe de proyectos y expertos en datos abiertos a 
+										<a href="http://www.isogeo.com/" target="_blank">Isogeo</a> (fr / en): startup francesa especializada en manejo de datos digitales
+									</li>
+								</ul>
+								<p data-fragment-index="4" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="2" class="fragment">Administrador de 
+										<a href="http://geotribu.net/" target="_blank">GeoTribu</a> (fr)
+									</li>
+									<li data-fragment-index="2" class="fragment">Involucrado en el Open Source (OSGeo)</li>
+									<li data-fragment-index="2" class="fragment" style="text-align: justify;">Desarrollo pequeños herramientas de manejo de datos geográficos (
+										<span style="font-size:20px">ver 
+											<a href="http://mappinggis.com/2014/10/dicogis-el-diccionario-de-datos-gis/" target="_blank">MappingGIS</a> o 
+											<a href="http://www.datamadre.com/posts/17" target="_blank">Datamadre</a> - ES
+										</span>)
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 235px; height: 119.85px; left: 697px; top: 94px;">
+							<a data-fragment-index="1" style="z-index: 12;" target="_blank" href="" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1091888/isogeo-200pixels-trans.png" data-natural-height="102" data-natural-width="200" style="visibility: visible;"/>
+							</a>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 110.308px; height: 213.5px; left: 836px; top: 214px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="1" style="z-index: 14;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1091912/FrenchTech_logo.png" data-natural-height="300" data-natural-width="155" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 82px; height: 82px; left: 733px; top: 490px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="2" style="z-index: 15;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1091932/geotribu_logo_75x75.png" data-natural-height="75" data-natural-width="75" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 945px; left: 8px; top: 645px;" data-block-type="text" class="sl-block">
+							<div data-fragment-index="3" dir="ui" style="z-index: 16;" class="sl-block-content fragment">
+								<p>
+									<span style="font-size:24px">@GeoJulien en 
+										<a href="https://twitter.com/geojulien" target="_blank">Twitter</a> (un 10% en ES) o en 
+										<a href="http://feedly.com/geojulien/GIS%20%28es%29" target="_blank">Feedly</a> (una colección puramente en ES)
+									</span>
+								</p>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 110px; height: 110px; left: 836px; top: 476px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="2" style="z-index: 17;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092883/osgeo.png" data-natural-height="225" data-natural-width="225" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 615px; left: 25px; top: 26px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 10;">
+								<h2>¿De que vamos a charlar?</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 888px; left: 25px; top: 133px; height: auto;">
+							<div dir="ui" class="sl-block-content" style="z-index: 11; text-align: left;">
+								<p style="text-align:center">1. Entorno general</p>
+								<p style="text-align:center">&nbsp;</p>
+								<p style="text-align:center">2. Abrir sus datos</p>
+								<p style="text-align:center">&nbsp;</p>
+								<p style="text-align:center">3. ¿Porque abrir?</p>
+								<p style="text-align:center">&nbsp;</p>
+								<p style="text-align:center">4. ¿Que abrir?</p>
+								<p style="text-align:center">&nbsp;</p>
+								<p style="text-align:center">5. ¿Como abrir?</p>
+								<p style="text-align:center">&nbsp;</p>
+								<p style="text-align:center">6. Postal abierta desde Francia</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;">
+							<div style="z-index: 10;" class="sl-block-content">
+								<h2>Entorno global</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 939px; height: 339.495px; left: 10px; top: 214px;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092920/data_bibliographie.png" data-natural-height="504" data-natural-width="1394" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 160px; top: 591px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:20px">Créditos: 
+										<a href="http://atelierdunumerique.com" target="_blank">l'Atelier du Numérique</a>
+									</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 78px; top: 50px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h2>Gobernanza de datos numéricos</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 890.667px; height: 501px; left: 30px; top: 129px;">
+							<div href="" style="border-style: solid; border-width: 1px; z-index: 12;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1091966/data_TooMuch.jpg" data-natural-height="900" data-natural-width="1600" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 841px; left: 80px; top: 630px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:16px">
+										<span style="color:rgb(0, 0, 0)">El mundo de hoy y mañana dibujado por Satya Nadella, CEO de Microsoft (créditos: </span>
+										<a href="http://blogs.technet.com" target="_blank">
+											<span style="color:rgb(17, 85, 204)">http://blogs.technet.com</span>
+										</a>
+										<span style="color:rgb(0, 0, 0)">)</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h2>Datos abiertos: mirada histórica</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 836px; left: 64px; top: 530px; height: auto;">
+							<div style="z-index: 12;" class="sl-block-content">
+								<ul>
+									<li>compartir &gt; compartimentar</li>
+									<li>bien común ;</li>
+									<li>herencia de la filosofía&nbsp; 
+										<em>Open Source</em> tal como Wikipedia ;
+									</li>
+									<li>una política pública;</li>
+								</ul>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 820.75px; height: 367.5px; left: 70px; top: 130px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 13; border-style: solid; border-width: 1px;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092712/evolution_homme_smartphone.jpg" data-natural-height="300" data-natural-width="670" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 459px;" data-block-type="text" class="sl-block">
+							<div dir="ui" style="z-index: 14;" class="sl-block-content">
+								<p>
+									<span style="font-size:20px">Créditos: Homo-Smartphonus, cleek.fr</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 86px; top: 2px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h2>Datos abiertos: hoy día</h2>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 556px; height: 198.438px; left: 202px; top: 76px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092200/OKFN_OpenDataIndex_2015-02-20.png" data-natural-height="318" data-natural-width="891" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 960px; height: 411px; left: 0px; top: 289px;" data-block-type="iframe" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<iframe data-src="http://index.okfn.org/vis/map/embed?embed_height=508px&amp;embed_title=All%2520datasets%2520%3B%25202014&amp;panel_tools=false&amp;map_place=" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 79px; top: 50px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h2>Abrir sus datos</h2>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 608px; height: 401.28px; left: 175px; top: 140px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12; border-style: solid; border-width: 1px;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092028/opendata_logo.jpg" data-natural-height="528" data-natural-width="800" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 560px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:20px">Créditos: 
+										<a href="http://kune.fr/culture-web/aujourdhui-lopen-data/" target="_blank">kune.fr</a>
+									</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>¿Porque abrir sus datos?</h1>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 394px; height: 394px; left: 523px; top: 178px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092041/eff.gif" data-natural-height="400" data-natural-width="400" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 388px; left: 72px; top: 229px;" data-block-type="text" class="sl-block">
+							<div data-fragment-index="0" style="z-index: 13;" class="sl-block-content fragment">
+								<h1>¡ Porque ya están !</h1>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 591px;" data-block-type="text" class="sl-block">
+							<div data-fragment-index="0" style="z-index: 14;" class="sl-block-content fragment">
+								<p>"¿Quieren despedir a todos los espías o agentes secretos?" Anonímo</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 10;" class="sl-block-content">
+								<h1>¿Porque abrir sus datos?</h1>
+							</div>
+						</div>
+						<div style="height: auto; width: 800px; left: 80px; top: 119px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 14;" class="sl-block-content">
+								<ul>
+									<li data-fragment-index="0" class="fragment">tríptico del mejoramiento colectivo</li>
+									<li data-fragment-index="1" class="fragment">cuesta poco, permite ahorrar plata</li>
+									<li data-fragment-index="2" class="fragment">innovación</li>
+									<li data-fragment-index="3" class="fragment">transparencia externa... y interna</li>
+									<li data-fragment-index="4" class="fragment">circulo virtuoso</li>
+								</ul>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 715.924px; height: 306px; left: 133px; top: 324px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="5" style="z-index: 12; border-style: solid; border-width: 1px;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092082/OpenData_herramienta_societal.png" data-natural-height="265" data-natural-width="620" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 181px; top: 630px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:16px">creditos: 
+										<a href="http://yogobierno.org/por-que-los-gobiernos-deben-abrirse-a-los-datos-abiertos/" target="_blank">yogobierno.org</a>
+									</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 10;" class="sl-block-content">
+								<h1>¿Porque abrir sus datos?</h1>
+							</div>
+						</div>
+						<div style="width: 804.255px; height: 567px; left: 78px; top: 119px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12; border-style: solid; border-width: 1px;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092108/GobiernoAbierto.jpg" data-natural-height="564" data-natural-width="800" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>¿ Que datos abrir ?</h1>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 292px;" data-block-type="text" class="sl-block">
+							<div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment">
+								<h1>
+									<span style="font-size:96px">TODO. Nada más.</span>
+								</h1>
+								<p>¿ otra pregunta ?</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>¿ Que datos 
+									<span style="color:#FF0000">NO</span> abrir ?
+								</h1>
+							</div>
+						</div>
+						<div style="height: auto; width: 800px; left: 80px; top: 469px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<h1>A ver las 
+									<span style="font-size:80px">
+										<span style="color:rgb(0, 128, 0)">buenas</span>
+									</span> razones para justificar impedir la apertura
+								</h1>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 381.497px; height: 341px; left: 289px; top: 128px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092237/ElPensador_Simpson.jpg" data-natural-height="581" data-natural-width="650" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 30px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 10;">
+								<h1 style="text-align: center;">Como abrir los datos: criterios</h1>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 410px; left: 61px; top: 168px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;">
+								<ul>
+									<li data-fragment-index="0" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">bruto,</span>
+										</p>
+									</li>
+									<li data-fragment-index="1" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">exhaustivo,</span>
+										</p>
+									</li>
+									<li data-fragment-index="2" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">actualizado,</span>
+										</p>
+									</li>
+									<li data-fragment-index="3" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">accesible,</span>
+										</p>
+									</li>
+									<li data-fragment-index="4" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">aprovechable,</span>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 410px; left: 550px; top: 168px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 12;">
+								<ul>
+									<li data-fragment-index="5" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">no discriminatorio,</span>
+										</p>
+									</li>
+									<li data-fragment-index="6" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">libre de derechos,</span>
+										</p>
+									</li>
+									<li data-fragment-index="7" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">proponer, no más,</span>
+										</p>
+									</li>
+									<li data-fragment-index="8" class="fragment" style="color:#000000">
+										<p style="text-align:justify">
+											<span style="color:#000000">permanente,</span>
+										</p>
+									</li>
+									<li data-fragment-index="9" class="fragment" style="color:#000000">
+										<span style="color:#000000">(gratis).</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 400.5px; height: 267px; left: 280px; top: 423px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 14;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092846/DatosAbiertos.gif" data-natural-height="200" data-natural-width="300" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>Como abrir los datos: marco legal</h1>
+							</div>
+						</div>
+						<div style="width: 595.594px; height: 501px; left: 182px; top: 140px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12; border-style: solid; border-width: 1px;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092218/PuertaDeLuzEnPared.jpg" data-natural-height="286" data-natural-width="340" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; width: 574px; left: 193px; top: 661px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:20px">Créditos: fuente desconocida en Google Imagenes</span>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>Como abrir los datos: las licencias</h1>
+							</div>
+						</div>
+						<div style="height: auto; min-width: 30px; min-height: 30px; width: 663px; left: 28px; top: 109px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<ul>
+									<li data-fragment-index="0" class="fragment" style="text-align: left;">La difusión debe ser hecha bajo de una licencia para garantizar las condiciones de uso, re-uso, difusión, etc.</li>
+								</ul>
+								<p style="text-align: left;">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="1" class="fragment" style="text-align: left;">La licencia más adecuada a los datos es ODbL: 
+										<em>Open Database License</em> (licencia de bases de datos abiertos). Es genérica, entonces necesita ser adaptada al derecho nacional 
+										<span style="font-size:20px">(como la mayoría de las licencias)</span>.
+									</li>
+								</ul>
+								<p style="text-align: left;">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="2" class="fragment" style="text-align: left;">Para los documentos y contenidos editoriales se preferirá Creative Commons.</li>
+									<li data-fragment-index="3" class="fragment" style="text-align: left;">Para los herramientas se puede usar un LGPL.</li>
+								</ul>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 162.364px; height: 171.5px; left: 755px; top: 318px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="1" style="z-index: 13;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092967/osm_logo.png" data-natural-height="826" data-natural-width="782" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 244px; height: 91.8102px; left: 698px; top: 560px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="2" style="z-index: 14; border-style: solid; border-width: 1px;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092977/creativecommonsbig.jpg" data-natural-height="111" data-natural-width="295" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 180px; height: 180px; left: 737px; top: 109px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="0" style="z-index: 15;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092992/marteau_juge.png" data-natural-height="256" data-natural-width="256" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 837px; left: 43px; top: 21px; height: auto;">
+							<div style="z-index: 11;" class="sl-block-content">
+								<h1>Como abrir los datos: herramientas</h1>
+							</div>
+						</div>
+						<div style="width: 536px; height: 402px; left: 388px; top: 150px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092246/belier_2.jpg" data-natural-height="768" data-natural-width="1024" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="height: auto; width: 536px; left: 388px; top: 578px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 13;" class="sl-block-content">
+								<p>
+									<span style="font-size:20px">Créditos: 
+										<a href="http://www.artbible.net/" target="_blank">artbible.net</a>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div style="height: auto; width: 337px; left: 20px; top: 140px;" data-block-type="text" class="sl-block">
+							<div style="z-index: 14;" class="sl-block-content">
+								<p style="text-align:left">Cualquiera página web con enlaces de descargas es suficiente.</p>
+								<p style="text-align:left">&nbsp;</p>
+								<p style="text-align:left">Ya existen herramientas libres:</p>
+								<p style="text-align:left">
+									<a href="http://opendatakit.org/" target="_blank">Open Data Kit</a>
+								</p>
+								<p style="text-align:left">
+									<a href="http://ckan.org/" target="_blank">CKAN</a>
+								</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 45px; top: 21px; height: auto;">
+							<div style="z-index: 10;" class="sl-block-content">
+								<h1>Postal abierta desde Francia</h1>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 758.484px; height: 581px; left: 101px; top: 119px;" data-block-type="image" class="sl-block">
+							<div style="z-index: 12;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092831/Postal_Francia.jpg" data-natural-height="730" data-natural-width="953" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 899px; left: 31px; top: 19px; height: auto;">
+							<div class="sl-block-content" style="text-align: left; z-index: 11;">
+								<h2>Un marco legal antiguo... pero recien completo</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 583px; left: 20px; top: 115px; height: auto;">
+							<div class="sl-block-content" style="z-index: 13; text-align: left;">
+								<ul>
+									<li data-fragment-index="0" class="fragment">1978, ley "CADA" (Comisión de Acceso a los Documentos Administrativos)</li>
+								</ul>
+								<p data-fragment-index="4" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="1" class="fragment">2005, transcripción de la directiva de la Unión Europea. Consolida a la CADA.</li>
+								</ul>
+								<p data-fragment-index="5" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="2" class="fragment">2011, creación de la licencia adaptada.</li>
+								</ul>
+								<p data-fragment-index="6" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="3" class="fragment">2012, los datos públicos son gratis.</li>
+								</ul>
+								<p data-fragment-index="7" class="fragment">&nbsp;</p>
+								<ul>
+									<li data-fragment-index="4" class="fragment">2015, todos los datos de interés público deben ser abiertos (propuesta)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 202px; height: 202px; left: 700px; top: 109px;">
+							<div data-fragment-index="0" style="z-index: 12;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1092997/cada.png" data-natural-height="427" data-natural-width="427" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 139.19px; height: 138px; left: 731px; top: 541px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="2" style="z-index: 14;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1093000/datagouv.png" data-natural-height="232" data-natural-width="234" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div style="min-width: 30px; min-height: 30px; width: 308px; height: 170.016px; left: 622px; top: 350px;" data-block-type="image" class="sl-block">
+							<div data-fragment-index="2" style="z-index: 15; border-style: solid; border-width: 1px;" class="sl-block-content fragment">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1093002/Logo_Licence_Ouverte_noir_avec_texte.gif" data-natural-height="276" data-natural-width="500" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 857px; left: 25px; top: 33px; height: auto;">
+							<div class="sl-block-content" style="text-align: left;">
+								<h2>Una buena dinámica dando Buenos resultados</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 430px; left: 24px; top: 124px; height: auto;">
+							<div class="sl-block-content" style="z-index: 13; text-align: left;">
+								<ul>
+									<li data-fragment-index="0" class="fragment">Cada vez más aperturas de parte de instituciones;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li data-fragment-index="1" class="fragment">Una mejora cooperación entre actores institucionales y ciudadanos;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li data-fragment-index="2" class="fragment">Pasó del 15 al 3 puesto en&nbsp; la clasificación mundial;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li data-fragment-index="3" class="fragment">Sigue liberando datos estratégicos: salud, transportes, etc.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="image" style="width: 564.14px; height: 421px; left: 390px; top: 189px;">
+							<div style="border-width: 1px;" class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1093020/opendata-map.png" data-natural-height="500" data-natural-width="670" style="visibility: visible;"/>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="text" style="width: 857px; left: 25px; top: 33px; height: auto;">
+							<div class="sl-block-content" style="text-align: left;">
+								<h2>... Efecto vitrina y falta mucho todavía</h2>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 430px; left: 24px; top: 140px; height: auto;">
+							<div dir="ui" class="sl-block-content" style="z-index: 13; text-align: left;">
+								<ul>
+									<li>&nbsp;A menudo es solo un efecto de comunicación;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li>Falta mantener la dínamica y involucrar más a los ciudadanos;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li>El mayor freno se llama auto-censura;</li>
+								</ul>
+								<p>&nbsp;</p>
+								<ul>
+									<li>Todavía apertura no rima con transparencia</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="sl-block" data-block-type="image" style="width: 700px; height: 525px; left: 130px; top: 45px;">
+							<div class="sl-block-content">
+								<img data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/geojulien/images/1093077/OpenData_bonbons.png" data-natural-height="375" data-natural-width="500" style="visibility: visible;"/>
+							</div>
+						</div>
+						<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 575px; height: auto;">
+							<div class="sl-block-content">
+								<h2>Gracias por su atención</h2>
+								<p>¿Algunas preguntas?</p>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -387,7 +691,7 @@ Reveal.addEventListener( 'customevent', function() {
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
